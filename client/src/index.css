@@ -17,11 +17,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #1DB700;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #1DB700;
 }
 
 body {
@@ -37,20 +37,75 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* Remove global button styles - Tailwind handles these */
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+} */
+
+/* Neon input styles */
+.neon-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #1f2937; /* bg-gray-800 */
+  border: 1px solid #374151; /* border-gray-700 */
+  border-radius: 0.5rem; /* rounded-lg */
+  color: white;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 0 0 rgba(0, 224, 255, 0);
 }
+
+.neon-input:focus {
+  border-color: #138B83; 
+}
+
+/* Neon button styles */
+.neon-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #138B83, #00C4B0);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-button:hover {
+  background: linear-gradient(to right, #345351, #138B83);
+}
+
+/* Neon text button styles */
+.neon-text-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #00EAD9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.neon-text-button:hover {
+  color: #138B83;
+}
+
 button:hover {
-  border-color: #646cff;
+  border-color: #138B83;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -62,9 +117,22 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #1DB700;
   }
   button {
     background-color: #f9f9f9;
+  }
+  
+  /* Adjust neon styles for light mode */
+  .neon-input {
+    background-color: #f3f4f6;
+    color: #1f2937;
+  }
+  
+  .neon-input:focus {
+    border-color: #0891b2;
+    box-shadow: 
+      0 0 0 2px rgba(8, 145, 178, 0.3),
+      0 0 15px 0 rgba(8, 145, 178, 0.4);
   }
 }
